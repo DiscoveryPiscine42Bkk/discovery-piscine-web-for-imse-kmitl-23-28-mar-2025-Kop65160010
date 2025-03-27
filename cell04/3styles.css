@@ -1,51 +1,94 @@
+/* ตั้งค่าหน้าจอให้พื้นหลังเปลี่ยนสีแบบ Gradient */
 body {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
     font-family: Arial, sans-serif;
-    background-color: #00b300; /* สีเขียวเหมือนในรูป */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* เอฟเฟกต์พื้นหลังเปลี่ยนสี */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* กล่องทั้งหมดให้อยู่ตรงกลาง */
 .container {
-    background-color: white;
-    width: 50%;
-    text-align: left;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    background: white;
     padding: 20px;
-    margin: 30px 0;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* จัดให้โปรไฟล์เรียงเป็นแนวตั้ง */
 .profile {
-    margin-bottom: 30px; /* เว้นระยะห่างระหว่างแต่ละโปรไฟล์ */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* รูปโปรไฟล์ให้เป็นวงกลม */
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
+    border: 3px solid #333;
     margin-bottom: 10px;
 }
 
-h1, h2, h3, p {
-    margin: 5px 0;
+/* ข้อความโปรไฟล์ให้เป็นระเบียบ */
+.profile-info {
+    text-align: center;
 }
 
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+h3 {
+    margin-top: 15px;
+}
+
+/* ปรับสไตล์ของปุ่ม */
 .btn {
-    display: block;
-    text-align: center;
-    background-color: #007bff;
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #333;
     color: white;
-    padding: 10px;
     text-decoration: none;
     border-radius: 5px;
-    width: 150px;
-    margin: 20px auto;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #555;
+}
+
+/* กล่องของปุ่มให้อยู่ตรงกลาง */
+.back-home {
+    margin-top: 20px;
+    text-align: center;
 }
