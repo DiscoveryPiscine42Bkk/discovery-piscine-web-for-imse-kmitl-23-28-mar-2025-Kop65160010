@@ -12,7 +12,10 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     text-align: center;
-    animation: gradientBG 10s infinite alternate; /* เปลี่ยนสีไปเรื่อยๆ */
+    animation: gradientBG 10s infinite alternate; /* เปลี่ยนสีพื้นหลัง */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* ตั้งค่ารูปโปรไฟล์ */
@@ -26,7 +29,13 @@ body {
 
 /* ตั้งค่าข้อมูลเรียงกันลงมาเรื่อยๆ */
 .profile {
-    margin-bottom: 20px; 
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2); /* ทำให้โปร่งใส */
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
 }
 
 /* ปรับแต่งปุ่ม */
