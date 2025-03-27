@@ -9,65 +9,71 @@
 <body>
     <div class="container">
         <h1>Experience and Contact</h1>
-        
-        <!-- ส่วนโปรไฟล์ของคนที่ 1 -->
-        <div class="profile-container">
-            <div class="profile-section">
-               <img src="file:///C:/Users/User/Desktop/my%20image/kop.jpg" alt="Norapon Krongdach" class="profile-img">
-                <div class="profile-info">
-                    <h2>Norapon Krongdach</h2>
-                    <p><strong>Age:</strong> 21</p>
-                    <p><strong>Bio:</strong> Sound Engineer</p>
-                </div>
-            </div>
-            
-            <!-- ประสบการณ์ของคนที่ 1 -->
-            <div class="section">
-                <h2>Experience</h2>
-                <ul>
-                    <li><strong>Sound Engineer </strong> - 2023-Present</li>
-                    <li><strong>Music Production </strong> - 2022-Present</li>
-                    <li><strong>Freelance Sound Engineer</strong> - Present</li>
-                </ul>
-            </div>
 
-            <!-- ข้อมูลติดต่อของคนที่ 1 -->
-            <div class="section">
-                <h2>Contact</h2>
-                <p>Email: <a href="mailto:Krongdachnorapon@gmail.com">Krongdachnorapon@gmail.com</a></p>
-                <p>Phone: +66 083-056-4765</p>
+        <!-- ส่วนโปรไฟล์ของคนที่ 1 -->
+        <div class="profile-section">
+            <img src="kop.jpg" alt="Profile Picture 1" class="profile-img">
+            <div class="profile-info">
+                <h2>Norapon Krongdach</h2>
+                <p><strong>Age:</strong> 21</p>
+                <p><strong>Bio:</strong> Sound Engineer</p>
             </div>
         </div>
 
-        <!-- ส่วนโปรไฟล์ของคนที่ 2 -->
-        <div class="profile-container">
-            <div class="profile-section">
-                 <img src="file:///C:/Users/User/Desktop/my%20image/sabuy.jpg" alt="Prachayamethee Thepsing" class="profile-img">
-                    <h2>Prachayamethee Thepsing</h2>
-                    <p><strong>Age:</strong> 21</p>
-                    <p><strong>Bio:</strong> Artist</p>
-                </div>
-            </div>
-            
-            <!-- ประสบการณ์ของคนที่ 2 -->
-            <div class="section">
-                <h2>Experience</h2>
-                <ul>
-                    <li><strong>Independent artist</strong> - 2020-Present</li>
-                    <li><strong>Songwriter</strong> - 2020-Present</li>
-                    <li><strong>Mixing engineer</strong> - 2019-Present</li>
-                </ul>
-            </div>
+        <!-- ประสบการณ์การทำงานของคนที่ 1 -->
+        <div class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Sound Engineer</strong> - 2023-Present</li>
+                <li><strong>Music Production</strong> - 2022-Present</li>
+                <li><strong>Freelance Sound Engineer</strong> - Present</li>
+            </ul>
+        </div>
 
-            <!-- ข้อมูลติดต่อของคนที่ 2 -->
-            <div class="section">
-                <h2>Contact</h2>
-                <p>Email: <a href="mailto:LTB1148@gmail.com">LTB1148@gmail.com</a></p>
-                <p>Phone: +66 064-556-7721</p>
+        <!-- ข้อมูลติดต่อของคนที่ 1 -->
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:Krongdachnorapon@gmail.com">Krongdachnorapon@gmail.com</a></p>
+            <p>Phone: +66 083-056-4765</p>
+        </div>
+
+        <!-- ส่วนโปรไฟล์ของคนที่ 2 -->
+        <div class="profile-section">
+            <img src="sabuy.jpg" alt="Profile Picture 2" class="profile-img">
+            <div class="profile-info">
+                <h2>Prachayamethee Thepsing</h2>
+                <p><strong>Age:</strong> 21</p>
+                <p><strong>Bio:</strong> Artist</p>
             </div>
+        </div>
+
+        <!-- ประสบการณ์การทำงานของคนที่ 2 -->
+        <div class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Independent artist</strong> - 2020-Present</li>
+                <li><strong>Songwriter</strong> - 2020-Present</li>
+                <li><strong>Mixing engineer</strong> - 2019-Present</li>
+            </ul>
+        </div>
+
+        <!-- ข้อมูลติดต่อของคนที่ 2 -->
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:LTB1148@gmail.com">LTB1148@gmail.com</a></p>
+            <p>Phone: +66 064-556-7721</p>
         </div>
 
         <a href="index.html" class="btn">Back to Home</a>
     </div>
+
+    <!-- JavaScript เปลี่ยนสีพื้นหลัง -->
+    <script>
+        function changeBackgroundColor() {
+            const colors = ["#ff5733", "#33ff57", "#3357ff", "#ff33a8", "#ffcc33"];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+        setInterval(changeBackgroundColor, 2000); // เปลี่ยนสีทุก 2 วินาที
+    </script>
 </body>
 </html>
