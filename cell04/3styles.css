@@ -1,73 +1,50 @@
-/* ตั้งค่าพื้นฐาน */
 body {
+    background-color: #4CAF50;
     font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
 }
 
-/* กล่องรวมข้อมูล */
 .container {
-    width: 90%;
-    max-width: 600px;
+    width: 80%;
+    margin: auto;
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* กล่องโปรไฟล์ */
-.profile {
-    background: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ปรับให้รูปอยู่กึ่งกลาง */
-.profile-img {
+.profile {
+    margin-top: 30px;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.profile:last-child {
+    border-bottom: none;
+}
+
+img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ddd;
-    display: block;
-    margin: 0 auto;
 }
 
-/* ข้อความในโปรไฟล์ */
 h1 {
-    text-align: center;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 22px;
-    margin: 10px 0 5px;
-}
-
-h3 {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 p {
     margin: 5px 0;
-    color: #555;
 }
 
-/* ลิงก์ */
 a {
-    color: #007BFF;
+    color: blue;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
