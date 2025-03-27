@@ -2,9 +2,9 @@
 @keyframes gradientBG {
     0% { background: #ff9a9e; }
     25% { background: #fad0c4; }
-    50% { background: #fad0c4; }
-    75% { background: #ffdde1; }
-    100% { background: #ff9a9e; }
+    50% { background: #ffdde1; }
+    75% { background: #ff9a9e; }
+    100% { background: #fad0c4; }
 }
 
 body {
@@ -12,30 +12,33 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     text-align: center;
-    animation: gradientBG 10s infinite alternate; /* เปลี่ยนสีพื้นหลัง */
+    animation: gradientBG 10s infinite alternate; /* พื้นหลังเปลี่ยนสี */
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+/* จัดกล่องข้อมูลให้ตรงกลางและเรียงลงมา */
+.profile {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.3); /* พื้นหลังขาวแบบโปร่งแสง */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* ทำให้โปร่งใสและเบลอ */
 }
 
 /* ตั้งค่ารูปโปรไฟล์ */
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     display: block;
-    margin: 10px auto;
-}
-
-/* ตั้งค่าข้อมูลเรียงกันลงมาเรื่อยๆ */
-.profile {
-    width: 80%;
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.2); /* ทำให้โปร่งใส */
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 10px;
-    text-align: center;
+    margin: 0 auto 10px;
 }
 
 /* ปรับแต่งปุ่ม */
@@ -47,6 +50,7 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 .btn:hover {
