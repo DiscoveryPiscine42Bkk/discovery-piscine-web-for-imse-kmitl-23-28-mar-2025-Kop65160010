@@ -1,108 +1,59 @@
-/* การตั้งค่าพื้นฐาน */  
+/* ตั้งค่าพื้นฐาน */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(270deg, #ff7675, #74b9ff, #55efc4, #fdcb6e);
-    background-size: 400% 400%;
-    animation: bgAnimation 10s ease infinite;
-    overflow-x: hidden;
+    background-color: #7378c5; /* สีพื้นหลัง */
+    color: #000;
 }
 
-/* ทำให้พื้นหลังเปลี่ยนสีตลอดเวลา */
-@keyframes bgAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* กล่องหลัก */
+/* กำหนดขนาดของคอนเทนเนอร์ */
 .container {
-    text-align: center;
-    background: white;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
     max-width: 800px;
-    margin-top: 50px; /* ขยับกล่องลงมาให้รูปบนสุดไม่ถูกตัด */
-}
-
-/* ส่วนโปรไฟล์ */
-.profile-container {
-    margin-bottom: 30px;
+    margin: 50px auto;
     padding: 20px;
-    background: #fff;
+    background-color: #fff; /* พื้นหลังสีขาว */
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-/* ส่วนโปรไฟล์แต่ละคน */
+/* จัดตำแหน่งรูปโปรไฟล์และข้อมูลให้ตรงกลาง */
 .profile-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
+    margin-bottom: 30px;
 }
 
-/* รูปโปรไฟล์ */
+/* ปรับขนาดและสัดส่วนของรูปโปรไฟล์ */
 .profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center;
-    border: 3px solid #ddd;
-    margin-right: 20px;
-    max-width: 100%;
-}
-
-/* ปรับให้รูปโปรไฟล์บนสุดไม่ถูกตัด */
-.profile-container:first-of-type {
-    padding-top: 50px; /* เพิ่มพื้นที่ด้านบน */
-}
-
-/* ข้อมูลโปรไฟล์ */
-.profile-info {
-    text-align: left;
-}
-
-/* ข้อความ */
-h2 {
-    color: #333;
+    border: 3px solid #555;
     margin-bottom: 10px;
 }
 
-p {
-    margin: 5px 0;
-    color: #555;
+/* หัวข้อ */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-/* ส่วนข้อมูล */
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
 .section {
-    text-align: left;
     margin-bottom: 30px;
 }
 
-/* รายการแบบไม่มีสัญลักษณ์ */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-    color: #555;
-}
-
-/* ลิงก์ */
+/* ปรับสไตล์ของลิงก์ */
 a {
-    color: #007BFF;
+    color: #0066cc;
     text-decoration: none;
 }
 
@@ -110,34 +61,30 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ปุ่ม */
+/* ปรับสไตล์ปุ่ม */
 .btn {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #0066cc;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #004d99;
 }
 
-/* รองรับมือถือ */
-@media screen and (max-width: 768px) {
+/* Responsive - ปรับให้แสดงผลดีบนมือถือ */
+@media (max-width: 600px) {
     .container {
-        padding: 20px;
+        margin: 20px;
+        padding: 15px;
     }
-
-    .profile-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    
     .profile-img {
-        margin-right: 0;
-        margin-bottom: 20px;
+        width: 120px;
+        height: 120px;
     }
 }
