@@ -1,102 +1,73 @@
-/* การตั้งค่าพื้นฐาน */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* ตั้งค่าพื้นฐาน */
 body {
     font-family: Arial, sans-serif;
-    width: 100vw;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffdde1);
-    background-size: 400% 400%;
-    animation: changeBackground 10s infinite alternate;
-    overflow: hidden; /* ป้องกันการเลื่อนหน้าจอ */
 }
 
-/* ทำให้พื้นหลังเปลี่ยนสีไปเรื่อย ๆ */
-@keyframes changeBackground {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
-
-/* กล่องหลักที่อยู่กลางหน้า */
+/* กล่องรวมข้อมูล */
 .container {
-    text-align: center;
+    width: 90%;
+    max-width: 600px;
     background: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 1000px;
-    min-height: 90vh; /* ปรับให้สูงพอจะเต็มจอ */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
-/* ปุ่ม */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* การตั้งค่าการจัดรูปแบบโปรไฟล์ */
+/* กล่องโปรไฟล์ */
 .profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #fff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     width: 100%;
-    max-width: 350px;
+    max-width: 500px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    gap: 20px;
+    text-align: center;
     margin-bottom: 20px;
-    transition: transform 0.3s;
 }
 
-.profile:hover {
-    transform: scale(1.05);
-}
-
-/* รูปภาพโปรไฟล์ */
+/* ปรับให้รูปอยู่กึ่งกลาง */
 .profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #ddd;
+    display: block;
+    margin: 0 auto;
 }
 
-/* ข้อมูลโปรไฟล์ */
-.profile-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+/* ข้อความในโปรไฟล์ */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-h1, h2 {
-    color: #333;
+h2 {
+    font-size: 22px;
+    margin: 10px 0 5px;
+}
+
+h3 {
+    margin-top: 15px;
 }
 
 p {
     margin: 5px 0;
     color: #555;
+}
+
+/* ลิงก์ */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
