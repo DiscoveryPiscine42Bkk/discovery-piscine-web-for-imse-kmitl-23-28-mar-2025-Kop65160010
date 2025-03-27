@@ -55,7 +55,8 @@ h1 {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: cover; /* ทำให้รูปแสดงเต็มที่โดยไม่ถูกบีบ */
+    object-position: center; /* จัดรูปให้แสดงจากตรงกลาง */
     border: 3px solid #ddd;
     margin-right: 20px;
 }
@@ -118,4 +119,3 @@ a:hover {
         margin-bottom: 20px;
     }
 }
-
