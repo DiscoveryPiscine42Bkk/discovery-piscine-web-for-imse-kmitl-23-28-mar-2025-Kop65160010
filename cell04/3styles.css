@@ -1,4 +1,4 @@
-/* การตั้งค่าพื้นฐาน */
+/* การตั้งค่าพื้นฐาน */ 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,11 +6,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* ปรับเป็น min-height เพื่อให้ขยายตามเนื้อหา */
     background-color: #f7f7f7;
+    overflow-x: hidden; /* ป้องกันการเลื่อนด้านข้าง */
 }
 
-/* กล่องหลักที่อยู่กลางหน้า */
+/* กล่องหลัก */
 .container {
     text-align: center;
     background: white;
@@ -21,44 +22,34 @@ body {
     max-width: 800px;
 }
 
-/* ส่วนหัว (ข้อความใหญ่) */
-h1 {
-    color: #333;
-}
-
-/* ปุ่ม */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
 /* ส่วนโปรไฟล์ */
+.profile-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ส่วนโปรไฟล์แต่ละคน */
 .profile-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    flex-wrap: wrap; /* ให้ปรับตัวเองเมื่อหน้าจอเล็ก */
     padding: 10px;
 }
 
-/* การจัดรูปแบบรูปโปรไฟล์ */
+/* รูปโปรไฟล์ */
 .profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover; /* ทำให้รูปแสดงเต็มที่โดยไม่ถูกบีบ */
-    object-position: center; /* จัดรูปให้แสดงจากตรงกลาง */
+    object-fit: cover;
+    object-position: center;
     border: 3px solid #ddd;
     margin-right: 20px;
+    max-width: 100%;
 }
 
 /* ข้อมูลโปรไฟล์ */
@@ -77,12 +68,13 @@ p {
     color: #555;
 }
 
-/* การจัดรูปแบบส่วนที่แสดงข้อมูล */
+/* ส่วนข้อมูล */
 .section {
     text-align: left;
     margin-bottom: 30px;
 }
 
+/* รายการแบบไม่มีสัญลักษณ์ */
 ul {
     list-style-type: none;
     padding: 0;
@@ -93,7 +85,7 @@ li {
     color: #555;
 }
 
-/* การจัดรูปแบบลิงก์ */
+/* ลิงก์ */
 a {
     color: #007BFF;
     text-decoration: none;
@@ -103,7 +95,22 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ให้การแสดงผลบนมือถือดูดี */
+/* ปุ่ม */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* รองรับมือถือ */
 @media screen and (max-width: 768px) {
     .container {
         padding: 20px;
