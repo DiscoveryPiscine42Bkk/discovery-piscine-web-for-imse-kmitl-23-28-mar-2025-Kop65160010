@@ -1,17 +1,21 @@
 /* การตั้งค่าพื้นฐาน */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-    overflow: auto;
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffdde1);
     background-size: 400% 400%;
     animation: changeBackground 10s infinite alternate;
+    overflow: hidden; /* ป้องกันการเลื่อนหน้าจอ */
 }
 
 /* ทำให้พื้นหลังเปลี่ยนสีไปเรื่อย ๆ */
@@ -29,6 +33,11 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 1000px;
+    min-height: 90vh; /* ปรับให้สูงพอจะเต็มจอ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ปุ่ม */
@@ -90,11 +99,4 @@ h1, h2 {
 p {
     margin: 5px 0;
     color: #555;
-}
-
-/* การจัดเรียงโปรไฟล์ให้อยู่ในแนวตั้ง */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
