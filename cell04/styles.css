@@ -1,12 +1,32 @@
-/* ตั้งค่าหน้าหลักให้จัดกลาง */
+/* สร้างการเคลื่อนไหวให้พื้นหลังเปลี่ยนสี */
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #ff7f7f;
+    }
+    25% {
+        background-color: #7f7fff;
+    }
+    50% {
+        background-color: #7fff7f;
+    }
+    75% {
+        background-color: #ffff7f;
+    }
+    100% {
+        background-color: #ff7f7f;
+    }
+}
+
+/* ตั้งค่าพื้นหลังให้เปลี่ยนไปเรื่อยๆ */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    animation: backgroundAnimation 10s infinite; /* พื้นหลังเปลี่ยนทุก 10 วินาที */
+    transition: background-color 1s ease;
 }
 
 /* กล่องหลัก */
@@ -17,43 +37,8 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 800px;
-}
-
-/* โปรไฟล์ */
-.profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 350px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-/* รูปภาพโปรไฟล์ */
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ddd;
-}
-
-/* ข้อมูลโปรไฟล์ */
-.profile-info {
-    display: flex;
-    flex-direction: column;
-}
-
-/* ส่วนหัวของประสบการณ์และข้อมูลติดต่อ */
-h3 {
-    margin-top: 10px;
+    max-width: 500px;
+    z-index: 1;
 }
 
 /* ปุ่ม */
@@ -65,8 +50,14 @@ h3 {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    margin: 10px;
 }
 
 .btn:hover {
     background-color: #0056b3;
+}
+
+/* เพิ่มการจัดระเบียบให้กับข้อความ */
+h1, p {
+    margin-bottom: 15px;
 }
