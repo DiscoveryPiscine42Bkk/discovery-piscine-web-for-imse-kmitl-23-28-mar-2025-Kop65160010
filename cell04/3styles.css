@@ -1,39 +1,77 @@
-/* โปรไฟล์ */
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ff7f50, #32cd32, #4682b4);
+    animation: changeBg 10s infinite alternate;
+}
+
+/* ทำให้พื้นหลังเปลี่ยนสี */
+@keyframes changeBg {
+    0% { background: #ff7f50; }
+    50% { background: #32cd32; }
+    100% { background: #4682b4; }
+}
+
+/* กล่องรวมข้อมูล */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* กล่องโปรไฟล์ */
 .profile {
     display: flex;
-    align-items: flex-start; /* ป้องกันการขยับขึ้นข้างบน */
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     width: 100%;
     max-width: 600px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    gap: 20px;
+    text-align: center;
     margin-bottom: 20px;
-    transition: transform 0.3s;
-    flex-wrap: nowrap; /* ไม่ให้ขึ้นบรรทัดใหม่ */
 }
 
-/* รูปภาพโปรไฟล์ */
+/* ปรับให้รูปอยู่กึ่งกลาง */
 .profile-img {
-    width: 120px; /* ปรับขนาดให้ลงตัว */
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #ddd;
 }
 
-/* ข้อมูลโปรไฟล์ */
-.profile-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    flex: 1; /* ให้ข้อความกินพื้นที่ที่เหลือ */
+/* ข้อความในโปรไฟล์ */
+.profile-info h2 {
+    margin: 10px 0 5px;
+    font-size: 22px;
+    color: #333;
 }
 
-/* จัดข้อความให้ไม่เบียดกัน */
-h2, p {
-    margin: 2px 0;
+.profile-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* ลิงก์ */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
