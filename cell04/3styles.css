@@ -1,45 +1,35 @@
-/* การตั้งค่าพื้นฐาน */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* การตั้งค่าพื้นฐาน */  
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 40px 10px;
-    animation: changeBgColor 10s infinite alternate; /* เปลี่ยนสีพื้นหลัง */
+    min-height: 100vh; /* ปรับเป็น min-height เพื่อให้ขยายตามเนื้อหา */
+    background: linear-gradient(45deg, #ff5733, #ffbd69, #33ff57, #337bff);
+    background-size: 400% 400%;
+    animation: bgAnimation 10s infinite alternate;
+    overflow-x: hidden; /* ป้องกันการเลื่อนด้านข้าง */
 }
 
-/* ทำให้กล่องอยู่ตรงกลางและเป็นกระดาษสีขาว */
+/* ทำให้พื้นหลังเปลี่ยนสี */
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* กล่องหลัก */
 .container {
     text-align: center;
     background: white;
-    padding: 40px;
+    padding: 50px 30px; /* ✅ เพิ่ม padding บน-ล่าง */
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
     max-width: 800px;
     position: relative;
-}
-
-/* ทำให้รูปโปรไฟล์อยู่เต็ม ไม่ถูกตัด */
-.profile-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    position: relative;
-}
-
-/* แก้ปัญหารูปโปรไฟล์บนสุดถูกตัด */
-.profile-section:first-of-type {
-    padding-top: 60px; /* ดันรูปลงมาให้เต็ม */
+    margin-top: 50px; /* ✅ เพิ่มระยะห่างด้านบน */
 }
 
 /* รูปโปรไฟล์ */
@@ -49,91 +39,17 @@ body {
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    border: 4px solid #007BFF;
-    margin-bottom: 15px;
+    border: 3px solid #ddd;
+    margin-right: 20px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
-/* ข้อมูลโปรไฟล์ */
-.profile-info {
-    text-align: center;
-}
-
-/* หัวข้อ */
-h2 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* ข้อความ */
-p {
-    margin: 5px 0;
-    color: #555;
-}
-
-/* ส่วนข้อมูล */
-.section {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* รายการแบบไม่มีสัญลักษณ์ */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-    color: #555;
-}
-
-/* ลิงก์ */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* ปุ่ม */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* เอฟเฟกต์เปลี่ยนสีพื้นหลัง */
-@keyframes changeBgColor {
-    0% { background-color: #ff7f50; }
-    25% { background-color: #ffa07a; }
-    50% { background-color: #ff6347; }
-    75% { background-color: #ff4500; }
-    100% { background-color: #dc143c; }
-}
-
-/* รองรับมือถือ */
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    .profile-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-img {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+/* ปรับระยะห่างของ profile-section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px; /* ✅ เพิ่ม padding-top */
 }
