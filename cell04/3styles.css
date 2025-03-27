@@ -1,85 +1,74 @@
-/* ตั้งค่าพื้นฐาน */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #7378c5; /* สีพื้นหลัง */
-    color: #000;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
 }
 
-/* คอนเทนเนอร์หลัก */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
+    max-width: 600px;
+    background: white;
     padding: 20px;
-    background-color: #fff;
+    margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
     text-align: center;
 }
 
-/* รูปโปรไฟล์ */
 .profile-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-    position: relative; /* ป้องกันการถูกตัด */
-    overflow: visible; /* แสดงผลรูปเต็ม */
-}
-
-/* ปรับขนาดรูปโปรไฟล์ + ไม่ให้โดนตัด */
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #555;
-    margin-bottom: 10px;
-    position: relative;
-    z-index: 10;
-}
-
-/* หัวข้อ */
-h1 {
-    font-size: 28px;
+    text-align: center;
     margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
+/* ปรับให้รูปไม่ถูกตัด */
+.profile-img {
+    width: 150px; /* ปรับขนาดรูปให้พอดี */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* ให้รูปเต็มโดยไม่ผิดสัดส่วน */
+    display: block;
+    margin: 0 auto;
 }
 
-/* ปรับระยะห่างเพื่อป้องกันรูปหาย */
+/* แก้ปัญหารูปแรกติดขอบบนเกินไป */
 .profile-section:first-child {
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
-/* ปรับสไตล์ปุ่ม */
+.section {
+    margin: 20px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #eaeaea;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0066cc;
-    color: #fff;
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
 }
 
 .btn:hover {
-    background-color: #004d99;
-}
-
-/* Responsive สำหรับมือถือ */
-@media (max-width: 600px) {
-    .container {
-        margin: 20px;
-        padding: 15px;
-    }
-
-    .profile-img {
-        width: 120px;
-        height: 120px;
-    }
+    background: #555;
 }
