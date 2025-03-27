@@ -1,4 +1,4 @@
-/* ตั้งค่าพื้นหลังของ body */
+/* ใช้ animation ให้พื้นหลังเปลี่ยนสีไปเรื่อยๆ */
 @keyframes backgroundColorChange {
     0% {
         background-color: #ff7f50; /* สีเริ่มต้น (Coral) */
@@ -17,7 +17,7 @@
     }
 }
 
-/* ใช้ animation ให้พื้นหลังเปลี่ยนสีไปเรื่อยๆ */
+/* ตั้งค่าพื้นหลังของ body */
 body {
     font-family: Arial, sans-serif;
     display: flex;
