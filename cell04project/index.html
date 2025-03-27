@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to my resume</h1>
+        <button onclick="changeBackground()">Change Background</button>
+        <div class="links">
+            <a href="profile.html" class="btn">Profile Page</a>
+            <a href="experience.html" class="btn">Experience and Contact</a>
+        </div>
+    </div>
+
+    <script>
+        function changeBackground() {
+            document.body.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+        }
+    </script>
+</body>
+</html>
